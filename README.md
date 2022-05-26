@@ -9,7 +9,7 @@ Les Miserables: <br />
 -average number of words per sentence <br />
 -displaying a parse tree (POS tags) for one sentence, using nltk <br />
 
-<img src="/margot95/mini-NLP-tasks-python-/prints.png" alt="prints" title="Console">
-![Prints](/margot95/mini-NLP-tasks-python-/prints.png?raw=true "Console title")
 
-<img src="/margot95/mini-NLP-tasks-python-/parse tree sentence16.png" alt="capture" title="Parse Tree">
+files:
+"prints.png" to see the consele after running the code
+"parse tree" to see the nltk parse tree
