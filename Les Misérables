@@ -1,0 +1,42 @@
+from urllib import request 
+url = "https://www.gutenberg.org/files/135/135-0.txt"
+#import Les Misérables book, english translation
+response = request.urlopen(url)
+raw = response.read().decode('utf8')
+print(type(raw))
+print("length of raw is:",len(raw),"characters.")
+
+if raw.find("PREFACE"):
+    print("There is a Preface in this book")
+else:
+    print("There is no Preface in this book.")
+    
+
+text = []
+preface_index = int(raw.index('PREFACE'))
+text = raw[preface_index:]
+print("length of text is:",len(text),"characters.")    
+    
+
+import nltk
+from nltk import sent_tokenize
+
+sentences = sent_tokenize(text)
+print("There are",len(sentences),"sentences in this text.")
+
+sentences_I = 0
+
+for i in sentences :
+    if "I " in i :
+        sentences_I += 1 
+    
+print('There are',sentences_I,'sentences containing "I" in this text. \n(',(sentences_I/len(sentences)*100),'% of the sentences contain the word "I").')
+
+    
+count_sentences_I_begin = 0
+
+for i in sentences :
+    if i.startswith("I "):
+        count_sentences_I_begin += 1 
+
+print("There are",count_sentences_I_begin,"sentences that start with I in this text.")
