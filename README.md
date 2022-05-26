@@ -7,3 +7,4 @@ Les Miserables: <br />
 -word tokenizing <br />
 -counting word "I" in the whole text <br />
 -average number of words per sentence <br />
+-displaying a parse tree (POS tags) for one sentence, using nltk
