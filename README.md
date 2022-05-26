@@ -11,4 +11,4 @@ Les Miserables: <br />
 
 <img src="/margot95/mini-NLP-tasks-python-/prints.png" alt="prints" title="Console">
 
-<img src="/margot95/mini-NLP-tasks-python-/capture.png" alt="capture" title="Capture">
+<img src="/margot95/mini-NLP-tasks-python-/parse tree sentence16.png" alt="capture" title="Parse Tree">
