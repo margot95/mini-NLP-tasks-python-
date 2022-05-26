@@ -10,6 +10,6 @@ Les Miserables: <br />
 -displaying a parse tree (POS tags) for one sentence, using nltk <br />
 
 
-files:
+files:<br />
 "prints.png" to see the consele after running the code <br />
 "parse tree" to see the nltk parse tree
