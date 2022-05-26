@@ -20,6 +20,7 @@ print("length of text is:",len(text),"characters.")
 
 import nltk
 from nltk import sent_tokenize
+from nltk import word_tokenize
 
 sentences = sent_tokenize(text)
 print("There are",len(sentences),"sentences in this text.")
@@ -40,3 +41,23 @@ for i in sentences :
         count_sentences_I_begin += 1 
 
 print("There are",count_sentences_I_begin,"sentences that start with I in this text.")
+
+
+
+raw_ = raw.split(".")
+sentences = len(raw_)
+print(sentences) 
+raw_ = raw.split("!")
+sentences = len(raw_) + sentences
+print(sentences)
+raw_ = raw.split("?")
+sentences = len(raw_) + sentences
+print(sentences)
+
+print("If we count '.','?' and '!', we find that there are", sentences, "sentences in this text.")
+sentences2 = nltk.sent_tokenize(raw)
+print("whereas with the nltk tokenizer, we count", len(sentences2), "sentences in the text.")
+
+words = word_tokenize(raw)
+print("There are", len(words), "words in this text.")
+print("In average, a sentence has", round(len(words)/sentences,2), "words.")
