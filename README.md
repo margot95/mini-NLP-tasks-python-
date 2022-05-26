@@ -7,4 +7,8 @@ Les Miserables: <br />
 -word tokenizing <br />
 -counting word "I" in the whole text <br />
 -average number of words per sentence <br />
--displaying a parse tree (POS tags) for one sentence, using nltk
+-displaying a parse tree (POS tags) for one sentence, using nltk <br />
+
+https://github.com/margot95/mini-NLP-tasks-python-/blob/773843d46c51b1e3a66c412e4b0d173884edd79a/prints.png
+
+https://github.com/margot95/mini-NLP-tasks-python-/blob/773843d46c51b1e3a66c412e4b0d173884edd79a/Capture%20d%E2%80%99%C3%A9cran%202022-05-26%20105807.png
