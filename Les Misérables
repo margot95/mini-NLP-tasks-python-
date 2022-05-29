@@ -4,47 +4,33 @@ url = "https://www.gutenberg.org/files/135/135-0.txt"
 response = request.urlopen(url)
 raw = response.read().decode('utf8')
 
-
-print(type(raw))
-print("length of raw is:",len(raw),"characters.")
 import nltk
 from nltk import sent_tokenize
 from nltk import word_tokenize
 
 
-
 #cutting off the text that is before the preface
-if raw.find("PREFACE"):
-    print("There is a Preface in this book")
-else:
-    print("There is no Preface in this book.")
+
 text = []
 preface_index = int(raw.index('PREFACE'))
-text = raw[preface_index:]
-print("length of text is:",len(text),"characters.")    
-    
+text = raw[preface_index:] 
     
 
-#tokenizing
+#tokenizing by hand
 sentences = sent_tokenize(text)
-print("There are",len(sentences),"sentences in this text.")
 raw_ = raw.split(".")
 sentences = len(raw_)
-print(sentences) 
 raw_ = raw.split("!")
 sentences = len(raw_) + sentences
-print(sentences)
 raw_ = raw.split("?")
 sentences = len(raw_) + sentences
-print(sentences)
-print("If we count '.','?' and '!', we find that there are", sentences, "sentences in this text.")
+#If we count '.','?' and '!', we find that there are 36998 sentences in this text.
 sentences2 = nltk.sent_tokenize(raw)
-print("whereas with the nltk tokenizer, we count", len(sentences2), "sentences in the text.")
+#whereas with the nltk tokenizer, we count 30079 sentences in the text.
 words = word_tokenize(raw)
-print("There are", len(words), "words in this text.")
-print("In average, a sentence has", round(len(words)/sentences,2), "words.")
-
-
+#682035 words in the file
+#in average, a sentence contains 18.43 words
+round(len(words)/sentences,2)
 
 
 #counting occurrences of I
@@ -52,13 +38,12 @@ sentences_I = 0
 for i in sentences :
     if "I " in i :
         sentences_I += 1     
-print('There are',sentences_I,'sentences containing "I" in this text. \n(',(sentences_I/len(sentences)*100),'% of the sentences contain the word "I").')
+
+#counting sentences that start with "I"
 count_sentences_I_begin = 0
 for i in sentences :
     if i.startswith("I "):
         count_sentences_I_begin += 1 
-print("There are",count_sentences_I_begin,"sentences that start with I in this text.")
-
 
 
 
