@@ -8,8 +8,5 @@ Les Miserables: <br />
 -counting word "I" in the whole text <br />
 -average number of words per sentence <br />
 -displaying a parse tree (POS tags) for one sentence, using nltk <br />
-
-
-files:<br />
-"prints.png" to see the consele after running the code <br />
-"parse tree" to see the nltk parse tree
+    files:<br />
+    nltk parse tree image
